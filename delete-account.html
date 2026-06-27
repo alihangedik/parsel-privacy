@@ -6,66 +6,83 @@
 <title>Parsel - Hesap Silme</title>
 
 <style>
-body{
+*{
     margin:0;
     padding:0;
-    background:#f4f6f8;
-    font-family:Inter, Arial, sans-serif;
-    color:#2d3748;
+    box-sizing:border-box;
+    font-family:Inter,Arial,sans-serif;
+}
+
+body{
+    background:#fff7f0;
+    color:#333;
 }
 
 .container{
-    max-width:850px;
-    margin:60px auto;
+    width:90%;
+    max-width:900px;
+    margin:50px auto;
     background:#fff;
-    border-radius:16px;
-    padding:50px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    overflow:hidden;
 }
 
-h1{
-    color:#16a34a;
+.header{
+    background:linear-gradient(135deg,#ff7a00,#ff9f43);
+    color:white;
+    padding:45px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:36px;
     margin-bottom:10px;
 }
 
-h2{
-    margin-top:35px;
-    color:#1f2937;
+.content{
+    padding:40px;
 }
 
-p{
+h2{
+    color:#ff7a00;
+    margin-top:35px;
+    margin-bottom:15px;
+}
+
+p,li{
     line-height:1.8;
+    font-size:16px;
 }
 
 ul,ol{
-    line-height:1.8;
+    margin-left:25px;
 }
 
-.button{
+.info{
+    background:#fff3e8;
+    border-left:5px solid #ff7a00;
+    padding:18px;
+    border-radius:10px;
+    margin:25px 0;
+}
+
+.mail{
     display:inline-block;
-    margin-top:20px;
-    background:#16a34a;
-    color:white;
+    margin-top:15px;
+    padding:14px 22px;
+    background:#ff7a00;
+    color:#fff;
     text-decoration:none;
-    padding:14px 24px;
     border-radius:10px;
     font-weight:bold;
 }
 
-.note{
-    margin-top:30px;
-    background:#f8fafc;
-    border-left:5px solid #16a34a;
-    padding:18px;
-    border-radius:8px;
-}
-
-footer{
-    margin-top:50px;
-    padding-top:20px;
-    border-top:1px solid #ddd;
+.footer{
+    text-align:center;
+    padding:25px;
     color:#777;
-    font-size:14px;
+    border-top:1px solid #eee;
 }
 </style>
 
@@ -74,30 +91,42 @@ footer{
 
 <div class="container">
 
-<h1>Parsel Hesap Silme</h1>
-
-<p>
-Bu sayfa, <strong>Parsel</strong> uygulamasındaki kullanıcı hesabınızı ve hesabınıza bağlı verilerinizi silme talebinde bulunabilmeniz amacıyla hazırlanmıştır.
-</p>
-
-<h2>Hesabımı Nasıl Silebilirim?</h2>
-
-<ol>
-<li>Kayıt olurken kullandığınız e-posta adresinden aşağıdaki adrese e-posta gönderin.</li>
-<li>E-posta konu kısmına <strong>"Hesap Silme Talebi"</strong> yazın.</li>
-<li>Talebiniz doğrulandıktan sonra hesabınız ve ilişkili verileriniz silinecektir.</li>
-</ol>
-
-<a class="button" href="mailto:DESTEKMAILINIZ@gmail.com">
-DESTEKMAILINIZ@gmail.com
-</a>
-
-<div class="note">
-<strong>İşlem Süresi:</strong><br>
-Hesap silme talepleri en geç <strong>7 iş günü</strong> içerisinde sonuçlandırılır.
+<div class="header">
+<h1>Parsel</h1>
+<p>Hesap Silme Bilgilendirmesi</p>
 </div>
 
-<h2>Silinecek Veriler</h2>
+<div class="content">
+
+<p>
+Parsel uygulaması kullanıcılarının hesaplarını diledikleri zaman kalıcı olarak silebilmelerini sağlar.
+</p>
+
+<div class="info">
+<strong>Uygulama içerisinde hesap silme özelliği bulunmaktadır.</strong><br><br>
+
+Hesabınızı silmek için uygulamada aşağıdaki yolu izleyebilirsiniz:
+
+<br><br>
+
+<b>Profil → Ayarlar → Hesabı Sil</b>
+
+<br><br>
+
+Bu işlem hesabınızı ve ilişkili kullanıcı verilerinizi kalıcı olarak siler.
+</div>
+
+<h2>Uygulamaya erişemiyorsanız</h2>
+
+<p>
+Eğer hesabınıza giriş yapamıyorsanız veya uygulamaya erişemiyorsanız, aşağıdaki e-posta adresi üzerinden hesap silme talebinde bulunabilirsiniz.
+</p>
+
+<a class="mail" href="mailto:gedikhan44@gmail.com">
+gedikhan44@gmail.com
+</a>
+
+<h2>Silinen Veriler</h2>
 
 <ul>
 <li>Kullanıcı hesabı</li>
@@ -110,12 +139,20 @@ Hesap silme talepleri en geç <strong>7 iş günü</strong> içerisinde sonuçla
 <h2>Saklanabilecek Veriler</h2>
 
 <p>
-Yasal yükümlülükler kapsamında saklanması gereken kayıtlar varsa, yalnızca ilgili mevzuatın zorunlu kıldığı süre boyunca muhafaza edilir ve süre sonunda kalıcı olarak silinir.
+Yasal yükümlülükler kapsamında saklanması zorunlu olan kayıtlar varsa yalnızca ilgili mevzuatın öngördüğü süre boyunca muhafaza edilir ve süre sonunda kalıcı olarak silinir.
 </p>
 
-<footer>
+<h2>İşlem Süresi</h2>
+
+<p>
+Uygulama üzerinden gerçekleştirilen hesap silme işlemi anında tamamlanır. E-posta yoluyla iletilen hesap silme talepleri ise en geç <strong>7 iş günü</strong> içerisinde sonuçlandırılır.
+</p>
+
+</div>
+
+<div class="footer">
 © 2026 Parsel. Tüm hakları saklıdır.
-</footer>
+</div>
 
 </div>
 
