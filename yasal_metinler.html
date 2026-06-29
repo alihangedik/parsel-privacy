@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parsel - Yasal Metinler ve Sözleşmeler</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #F97316; /* UygulamaTemasi.anaTuruncu */
+            --primary-light: #FB923C; /* UygulamaTemasi.acikTuruncu */
+            --dark: #0B1F3A; /* UygulamaTemasi.prussianBlue */
+            --light: #F3F4F6; /* UygulamaTemasi.platinum */
+            --white: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--primary);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            color: #9CA3AF;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 1rem;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        .nav-sticky {
+            position: sticky;
+            top: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-sticky h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-sticky a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #4B5563;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            transition: all 0.2s ease-in-out;
+            font-size: 0.95rem;
+        }
+
+        .nav-sticky a:hover {
+            background-color: #FFF7ED; /* Turuncu tonu hafif arka plan */
+            color: var(--primary);
+        }
+
+        .content {
+            flex-grow: 1;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            border-left: 5px solid var(--primary);
+            padding-left: 1rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p, li {
+            color: #4B5563;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: var(--dark);
+        }
+
+        .placeholder {
+            background-color: #FEF3C7;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            border: 1px dashed #F59E0B;
+            font-weight: 500;
+            color: #B45309;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6B7280;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .nav-sticky {
+                position: static;
+                margin-bottom: 2rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Parsel App Yasal Metinler</h1>
+        <p>Son Güncelleme: <span class="highlight">Haziran 2026</span></p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="nav-sticky">
+                <h3>İçindekiler</h3>
+                <a href="#on-bilgilendirme">Ön Bilgilendirme Formu</a>
+                <a href="#mesafeli-satis">Mesafeli Satış Sözleşmesi</a>
+                <a href="#gizlilik-kvkk">Gizlilik ve KVKK Politikası</a>
+                <a href="#iptal-iade">İptal ve İade Politikası</a>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #E5E7EB;">
+                    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: var(--primary);">Kullanım Koşulları (Apple EULA) ↗</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content">
+
+            <!-- 1. ÖN BİLGİLENDİRME FORMU -->
+            <section id="on-bilgilendirme">
+                <h2>Ön Bilgilendirme Formu</h2>
+                
+                <h3>1. Satıcı Bilgileri</h3>
+                <p>
+                    <strong>Unvan:</strong> <span class="placeholder">[Şirket Resmi Unvanı / Örn: Parsel Bilişim A.Ş.]</span><br>
+                    <strong>Adres:</strong> <span class="placeholder">[Şirket Açık Adresi]</span><br>
+                    <strong>E-posta:</strong> <span class="placeholder">[destek@parsel.com]</span><br>
+                    <strong>Vergi Dairesi ve No:</strong> <span class="placeholder">[Vergi Dairesi] / [Vergi No]</span>
+                </p>
+
+                <h3>2. Konu</h3>
+                <p>İşbu Ön Bilgilendirme Formu’nun ("Form") konusu; Alıcı’nın, Satıcı’ya ait "Parsel" mobil uygulaması üzerinden elektronik ortamda satın aldığı dijital içerik/abonelik hizmetlerinin satışı ve ifası ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği hükümleri uyarınca bilgilendirilmesidir.</p>
+
+                <h3>3. Sözleşme Konusu Mal/Hizmetin Temel Nitelikleri</h3>
+                <p>Alıcı, Parsel uygulaması içerisinde belirtilen aylık veya yıllık abonelik paketlerinden birini satın alarak ilan verme, ilanları inceleme ve ekstra uygulama içi dijital özelliklere erişim hakkı kazanır. Dijital hizmet, satın alım anında anında ifa edilir.</p>
+
+                <h3>4. Fiyat ve Ödeme Bilgileri</h3>
+                <p>Uygulama içi satın alımlar App Store veya Google Play Store üzerinden Alıcı'nın hesabına bağlı ödeme yöntemi ile tahsil edilmektedir. Seçilen paketin tüm vergiler dahil toplam satış fiyatı satın alma işlemi öncesinde ödeme ekranında açıkça belirtilmiştir.</p>
+
+                <h3>5. Cayma Hakkı İstisnası</h3>
+                <p>Mesafeli Sözleşmeler Yönetmeliği’nin 15. maddesinin 1. fıkrasının (ğ) bendi uyarınca, elektronik ortamda anında ifa edilen hizmetler (dijital abonelikler ve uygulama içi satın alımlar) cayma hakkının istisnaları kapsamındadır. Bu nedenle <strong>bu hizmette cayma hakkı bulunmamaktadır.</strong></p>
+            </section>
+
+            <!-- 2. MESAFELİ SATIŞ SÖZLEŞMESİ -->
+            <section id="mesafeli-satis">
+                <h2>Mesafeli Satış Sözleşmesi</h2>
+                
+                <h3>Madde 1 - Taraflar</h3>
+                <p><strong>1.1. Satıcı:</strong> Bu sözleşmede hizmeti sunan tüzel kişiliği (Bundan sonra "SATICI" olarak anılacaktır) ifade eder. Bilgileri Ön Bilgilendirme Formu'nda yer almaktadır.</p>
+                <p><strong>1.2. Alıcı:</strong> Parsel uygulamasını kullanarak dijital abonelik/hizmet satın alan gerçek veya tüzel kişidir. (Bundan sonra "ALICI" olarak anılacaktır).</p>
+
+                <h3>Madde 2 - Sözleşmenin Konusu</h3>
+                <p>İşbu sözleşmenin konusu, ALICI'nın SATICI'ya ait Parsel mobil uygulaması üzerinden elektronik ortamda siparişini yaptığı ve nitelikleri ile satış fiyatı belirtilen dijital abonelik hizmetinin satışı ve teslimi ile ilgili yasal hak ve yükümlülüklerin belirlenmesidir.</p>
+
+                <h3>Madde 3 - Hizmetin Teslimi ve İfa Yöntemi</h3>
+                <p>Abonelik bedelinin App Store (Apple) veya Google Play (Google) sistemleri üzerinden tahsil edilmesinin ardından, ALICI'nın hesabı otomatik olarak seçilen abonelik statüsüne yükseltilir. İşlem tamamen dijitaldir ve fiziki bir teslimat söz konusu değildir.</p>
+
+                <h3>Madde 4 - Abonelik İptali ve Yenileme</h3>
+                <ul>
+                    <li>Abonelikler, periyodun (aylık/yıllık) sonunda aksi kullanıcı tarafından iptal edilmedikçe otomatik olarak yenilenir.</li>
+                    <li>ALICI, aboneliğini dilediği zaman App Store veya Google Play hesap ayarlarından iptal edebilir.</li>
+                    <li>İptal işlemi, bir sonraki faturalandırma döngüsünü durdurur; mevcut ödenmiş dönemin kullanım hakkı dönem sonuna kadar devam eder.</li>
+                </ul>
+
+                <h3>Madde 5 - Uyuşmazlıkların Çözümü</h3>
+                <p>İşbu sözleşmenin uygulanmasında, Ticaret Bakanlığınca ilan edilen değere kadar Tüketici Hakem Heyetleri ile ALICI'nın veya SATICI'nın yerleşim yerindeki Tüketici Mahkemeleri yetkilidir.</p>
+            </section>
+
+            <!-- 3. GİZLİLİK VE KVKK -->
+            <section id="gizlilik-kvkk">
+                <h2>Gizlilik Politikası ve Aydınlatma Metni (KVKK)</h2>
+                
+                <h3>1. Veri Sorumlusu</h3>
+                <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, kişisel verileriniz veri sorumlusu sıfatıyla <span class="placeholder">[Şirket Resmi Unvanı]</span> tarafından aşağıda açıklanan kapsamda işlenebilecektir.</p>
+
+                <h3>2. İşlenen Kişisel Verileriniz</h3>
+                <p>Uygulamamızı kullanımınız sırasında aşağıdaki verileriniz işlenebilmektedir:</p>
+                <ul>
+                    <li><strong>Kimlik ve İletişim Verileri:</strong> Ad, soyad, telefon numarası, e-posta adresi.</li>
+                    <li><strong>İşlem Güvenliği ve Cihaz Verileri:</strong> IP adresi, cihaz modeli, işletim sistemi versiyonu, uygulama kullanım logları.</li>
+                    <li><strong>Abonelik ve Ödeme Verileri:</strong> Satın alınan paket bilgileri, satın alma tarihleri (Not: Kredi kartı bilgileriniz Apple/Google altyapısında tutulmakta olup, bizim tarafımızdan görülmez veya saklanmaz).</li>
+                </ul>
+
+                <h3>3. Kişisel Verilerin İşlenme Amacı</h3>
+                <p>Verileriniz; üyelik kaydınızın oluşturulması, uygulama içi hizmetlerin (ilan verme, mesajlaşma vb.) sunulması, yasal yükümlülüklerin yerine getirilmesi, teknik hataların giderilmesi ve size özel müşteri desteği sunulması amacıyla işlenmektedir.</p>
+
+                <h3>4. Verilerin Aktarımı</h3>
+                <p>Kişisel verileriniz, yasal yükümlülüklerimiz gereği yetkili kamu kurumlarına; hizmet kalitesini artırmak amacıyla bulut altyapı sağlayıcılarına (örn. Supabase, Firebase) ve veri analitiği servislerine (örn. RevenueCat) KVKK'nın 8. ve 9. maddelerine uygun olarak aktarılabilir.</p>
+
+                <h3>5. İlgili Kişinin Hakları</h3>
+                <p>KVKK’nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, eksik/yanlış işlenmişse düzeltilmesini isteme ve silinmesini talep etme haklarına sahipsiniz. Bu haklarınızı kullanmak için <span class="placeholder">[destek@parsel.com]</span> adresine e-posta gönderebilirsiniz.</p>
+            </section>
+
+            <!-- 4. İPTAL VE İADE POLİTİKASI -->
+            <section id="iptal-iade">
+                <h2>İptal ve İade Politikası</h2>
+                
+                <h3>Abonelik İptali</h3>
+                <p>Parsel uygulamasındaki tüm abonelikler App Store veya Google Play Store altyapısı kullanılarak yönetilmektedir. Üyeliğinizi iptal etmek için şu adımları izlemelisiniz:</p>
+                <ul>
+                    <li><strong>iOS (Apple) Cihazlarda:</strong> Ayarlar > Apple Kimliğiniz (adınız) > Abonelikler > Parsel > Aboneliği İptal Et.</li>
+                    <li><strong>Android (Google) Cihazlarda:</strong> Google Play Store > Profil İkonu > Ödemeler ve Abonelikler > Abonelikler > Parsel > İptal Et.</li>
+                </ul>
+                <p>Aboneliğinizi iptal ettiğinizde, mevcut fatura döneminizin sonuna kadar uygulamanın Premium/Pro özelliklerini kullanmaya devam edebilirsiniz. Bir sonraki dönem için sizden ücret alınmaz.</p>
+
+                <h3>İade Şartları</h3>
+                <p>Dijital içerikler ve anında ifa edilen hizmetler yasal olarak cayma hakkı kapsamı dışındadır. Ancak teknik bir sorun yaşamanız durumunda iade talepleriniz doğrudan platform sağlayıcıları tarafından yönetilir:</p>
+                <ul>
+                    <li><strong>Apple kullanıcıları:</strong> "reportaproblem.apple.com" adresinden iade talebinde bulunmalıdır. SATICI olarak bizim Apple ödemelerini doğrudan iade etme yetkimiz sistem gereği bulunmamaktadır.</li>
+                    <li><strong>Google Play kullanıcıları:</strong> Satın alımdan sonraki ilk 48 saat içerisinde Google Play üzerinden veya makbuz numarası (GPA ile başlayan numara) ile destek ekibimize (<span class="placeholder">[destek@parsel.com]</span>) ulaşarak iade talebinde bulunabilir.</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Parsel App. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
+
